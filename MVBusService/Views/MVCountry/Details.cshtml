@@ -1,0 +1,42 @@
+﻿@model MVBusService.Models.country
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>country</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postalPattern)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postalPattern)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phonePattern)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phonePattern)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.countryCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

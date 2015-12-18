@@ -1,0 +1,34 @@
+﻿@model MVBusService.Models.routeStop
+
+@{
+    ViewBag.Title = "Stop Details for " + ViewBag.routeNumber + "-" + ViewBag.routeName;
+}
+
+<h2>Stop Details for @ViewBag.routeNumber-@ViewBag.routeName</h2>
+
+<div>
+    <h4>routeStop</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.offsetMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offsetMinutes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.busStop.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.busStop.location)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.routeStopId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

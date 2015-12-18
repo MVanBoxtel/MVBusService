@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "RouteSelector";
+}
+
+<h2>Select route to see schedule at @ViewBag.busStopNumber @ViewBag.busStopName</h2>
+
+
+<form action="/MVRouteSchedule/RouteStopSchedule" method="post">
+    @Html.DropDownList("routeStopId")
+    <input type="submit" value="Select" />
+</form>
+
+

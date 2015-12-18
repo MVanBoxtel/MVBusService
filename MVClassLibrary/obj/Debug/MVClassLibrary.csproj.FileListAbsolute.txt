@@ -1,0 +1,9 @@
+G:\PROG2230\Assignment 6\MVBusServiceA6\MVClassLibrary\bin\Debug\MVClassLibrary.dll
+G:\PROG2230\Assignment 6\MVBusServiceA6\MVClassLibrary\bin\Debug\MVClassLibrary.pdb
+G:\PROG2230\Assignment 6\MVBusServiceA6\MVClassLibrary\obj\Debug\MVClassLibrary.dll
+G:\PROG2230\Assignment 6\MVBusServiceA6\MVClassLibrary\obj\Debug\MVClassLibrary.pdb
+G:\PROG2230\Assignment 6\MVBusServiceA6\MVClassLibrary\obj\Debug\MVClassLibrary.csprojResolveAssemblyReference.cache
+G:\PROG2230\Assignment 8\MVBusServiceA8\MVClassLibrary\bin\Debug\MVClassLibrary.dll
+G:\PROG2230\Assignment 8\MVBusServiceA8\MVClassLibrary\bin\Debug\MVClassLibrary.pdb
+G:\PROG2230\Assignment 8\MVBusServiceA8\MVClassLibrary\obj\Debug\MVClassLibrary.dll
+G:\PROG2230\Assignment 8\MVBusServiceA8\MVClassLibrary\obj\Debug\MVClassLibrary.pdb

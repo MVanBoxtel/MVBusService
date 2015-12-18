@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVBusService.Models.country>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postalPattern)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phonePattern)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postalPattern)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phonePattern)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.countryCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.countryCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.countryCode })
+        </td>
+    </tr>
+}
+
+</table>

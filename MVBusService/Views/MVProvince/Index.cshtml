@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MVBusService.Models.province>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taxCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.taxRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capital)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.taxCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.taxRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.capital)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country.name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.provinceCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.provinceCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.provinceCode })
+        </td>
+    </tr>
+}
+
+</table>

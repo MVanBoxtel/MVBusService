@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVBusService.Models.routeSchedule>
+
+@{
+    ViewBag.Title = "RouteStopSchedule";
+}
+
+<h2>@ViewBag.stop</h2>
+
+<h4>@ViewBag.route</h4>
+
+
+<h4>Mon - Fri</h4>
+@foreach (var item in Model)
+{
+    if (item.isWeekDay == true)
+    {
+        <li>
+            @item.startTime
+        </li>
+    }
+}
+
+<h4>Sat-Sun & Holidays</h4>
+@foreach (var item in Model)
+{
+    if (item.isWeekDay == false)
+    {
+        <li>
+            @item.startTime
+        </li>
+    }
+}
+
+
+
+

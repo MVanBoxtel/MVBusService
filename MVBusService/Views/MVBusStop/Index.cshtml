@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MVBusService.Models.busStop>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("location", "Index", new { orderBy="location" }, null)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.locationHash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.goingDowntown)
+        </th>
+        <th>
+            @Html.ActionLink("busStopNumber", "Index" , new { orderBy="busStopNumber" }, null)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.location, "RouteSelector", new { item.busStopNumber }, null)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.locationHash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.goingDowntown)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.busStopNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.busStopNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.busStopNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.busStopNumber })
+        </td>
+    </tr>
+}
+
+</table>

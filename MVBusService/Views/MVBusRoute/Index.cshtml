@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVBusService.Models.busRoute>
+
+@{
+    ViewBag.Title = "Bus Route Listing";
+}
+
+<h2>Bus Route Listing</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.routeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.busRouteCode)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.routeName)
+        </td>
+        <td>
+            @Html.ActionLink(item.busRouteCode, "Index", "MVRouteStop", new { busRouteValue=item.busRouteCode, busRouteName=item.routeName }, null)
+        </td>
+        <td>
+            @Html.ActionLink("Monitored Stops", "Index", "MVTrip", new { busRouteCode=item.busRouteCode, busRouteName=item.routeName }, null)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.busRouteCode }) |
+            @Html.ActionLink("Details", "Details", new { id=item.busRouteCode }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.busRouteCode })
+        </td>
+    </tr>
+}
+
+</table>

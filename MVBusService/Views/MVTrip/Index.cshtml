@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MVBusService.Models.TripModel>
+
+@{
+    ViewBag.Title = "Bus Trips for " + ViewBag.busRouteCode + " - " + ViewBag.busRouteName;
+}
+
+<h2>Bus Trips for @Session["busRouteCodeValue"] - @Session["busRouteNameValue"]</h2>
+
+<p>@Html.ActionLink("Create New Trip", "Create")</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Start Time
+        </th>
+        <th>
+            Driver
+        </th>
+        <th>
+            Bus #
+        </th>
+        <th>
+            Comments
+        </th>
+    </tr>
+
+@foreach (var item in Model) 
+{
+    <tr>
+        <td>
+            @item.date.ToString("ddd") @item.date.ToString("dd MMM yyyy")
+        </td>
+        <td>
+            @item.startTime
+        </td>
+        <td>
+            @item.driver
+        </td>
+        <td>
+            @item.busNumber
+        </td>
+        <td>
+            @item.comments
+        </td>
+    </tr>
+
+
+}
+
+
+</table>
+

@@ -1,0 +1,58 @@
+﻿@model MVBusService.Models.province
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>province</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taxCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taxCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taxRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taxRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.capital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.provinceCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

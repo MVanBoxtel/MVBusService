@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVBusService", "MVBusService\MVBusService.csproj", "{A856D7AB-A8DA-4495-96C5-707DB3F42947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVClassLibrary", "MVClassLibrary\MVClassLibrary.csproj", "{3D8904FA-158A-4018-B121-92B586F679AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVBusServiceTests", "MVBusServiceTests\MVBusServiceTests.csproj", "{9DECBB86-CEFC-401A-9A17-184804D78D4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A856D7AB-A8DA-4495-96C5-707DB3F42947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A856D7AB-A8DA-4495-96C5-707DB3F42947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A856D7AB-A8DA-4495-96C5-707DB3F42947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A856D7AB-A8DA-4495-96C5-707DB3F42947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8904FA-158A-4018-B121-92B586F679AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8904FA-158A-4018-B121-92B586F679AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8904FA-158A-4018-B121-92B586F679AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8904FA-158A-4018-B121-92B586F679AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DECBB86-CEFC-401A-9A17-184804D78D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DECBB86-CEFC-401A-9A17-184804D78D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DECBB86-CEFC-401A-9A17-184804D78D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DECBB86-CEFC-401A-9A17-184804D78D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

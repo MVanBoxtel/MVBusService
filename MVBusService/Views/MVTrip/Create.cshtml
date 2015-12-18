@@ -1,0 +1,42 @@
+﻿@model MVBusService.Models.trip
+
+@{
+    ViewBag.Title = "New Trip for " + @Session["busRouteCodeValue"] + " - " + @Session["busRouteNameValue"];
+}
+
+<h2>New Trip for @Session["busRouteCodeValue"] - @Session["busRouteNameValue"]</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <form action="/MVTrip/Create" method="post">
+        @Html.EditorForModel()
+        <br />
+        @Html.LabelFor(model => model.routeScheduleId)
+        @Html.DropDownListFor(model => model.routeScheduleId, ViewBag.routeScheduleList as SelectList)
+        @Html.ValidationMessageFor(model => model.routeScheduleId)
+        <br />
+        @Html.LabelFor(model => model.driverId)
+        @Html.DropDownListFor(model => model.driverId, ViewBag.driverList as SelectList)
+        @Html.ValidationMessageFor(model => model.driverId)
+        <br />
+        @Html.LabelFor(model => model.busId)<br />
+        @{ int counter = 0;
+            foreach (SelectListItem item in (IEnumerable<SelectListItem>)ViewData["busList"])
+            {
+                @Html.Label(item.Text)
+                @Html.RadioButtonFor(model => model.busId, item.Value)
+                if (counter == 4)
+	            {
+		            <br />
+                    counter = 0;
+	            }
+                counter++;
+            }
+        }
+        @Html.ValidationMessageFor(model => model.busId)
+        <br />
+        <input type="submit" value="Create Trip" />
+        @Html.ActionLink("Return to Listing", "Index")   
+</form>
+}

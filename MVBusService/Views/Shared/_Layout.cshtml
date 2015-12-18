@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Matt's @Resources.MVTranslations.busService</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/Content/busImage.jpg" height="75" width="75" style="padding:10px" />
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.ActionLink("Matt's " + Resources.MVTranslations.busService, "Index", "Home", null, new { @class = "navbar-brand" })
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(Resources.MVTranslations.home, "Index", "Home")</li>
+                    <li>@Html.ActionLink(Resources.MVTranslations.busRoutes, "Index", "MVBusRoute")</li>
+                    <li>@Html.ActionLink(Resources.MVTranslations.busStops, "Index", "MVBusStop")</li>
+                    <li>@Html.ActionLink(Resources.MVTranslations.drivers, "Index", "MVDriver")</li>
+                    <li>@Html.ActionLink(Resources.MVTranslations.languages, "ChangeLanguage", "MVLanguage")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <br />
+        <span class="text-danger"><strong>@TempData["message"]</strong></span>
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="col-md-6">&copy; <a href="mailto:mvanboxtel0873@conestogac.on.ca">Matthew Van Boxtel</a>, @Resources.MVTranslations.section 2</div>
+            <div class="col-md-6" style="text-align:right">@Html.ActionLink(Resources.MVTranslations.about, "About", "Home") &nbsp; &nbsp; &nbsp; &nbsp; @Html.ActionLink(Resources.MVTranslations.contact, "Contact", "Home")</div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
